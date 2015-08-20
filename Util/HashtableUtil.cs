@@ -15,15 +15,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<int>
 	//----------------------------------------------------------
-	public static List<int> GetListInt( Hashtable hashtabel, string key )
+	public static List<int> GetListInt( Hashtable hashtable, string key )
 	{
 		List<int> ret = new List<int>();
 
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		}
@@ -37,15 +37,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<long>
 	//----------------------------------------------------------
-	public static List<long> GetListLong( Hashtable hashtabel, string key )
+	public static List<long> GetListLong( Hashtable hashtable, string key )
 	{
 		List<long> ret = new List<long>();
 		
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		}
@@ -59,15 +59,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<float>
 	//----------------------------------------------------------
-	public static List<float> GetListFloat( Hashtable hashtabel, string key )
+	public static List<float> GetListFloat( Hashtable hashtable, string key )
 	{
 		List<float> ret = new List<float>();
 		
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		}
@@ -81,15 +81,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<double>
 	//----------------------------------------------------------
-	public static List<double> GetListDouble( Hashtable hashtabel, string key )
+	public static List<double> GetListDouble( Hashtable hashtable, string key )
 	{
 		List<double> ret = new List<double>();
 		
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		} 
@@ -103,15 +103,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<string>
 	//----------------------------------------------------------
-	public static List<string> GetListString( Hashtable hashtabel, string key )
+	public static List<string> GetListString( Hashtable hashtable, string key )
 	{
 		List<string> ret = new List<string>();
 
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		} 
@@ -125,15 +125,15 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// List<Hashtable>
 	//----------------------------------------------------------
-	public static List<Hashtable> GetListHashtable( Hashtable hashtabel, string key )
+	public static List<Hashtable> GetListHashtable( Hashtable hashtable, string key )
 	{
 		List<Hashtable> ret = new List<Hashtable>();
 		
-		if( !hashtabel.ContainsKey( key ) ){
+		if( !hashtable.ContainsKey( key ) ){
 			return ret;
 		}
 
-		ArrayList arrayList = hashtabel[ key ] as ArrayList;
+		ArrayList arrayList = hashtable[ key ] as ArrayList;
 		if( arrayList == null ){
 			return ret;
 		} 
@@ -151,10 +151,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// int
 	//----------------------------------------------------------
-	public static int GetInt( Hashtable hashtabel, string key )
+	public static int GetInt( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return Convert.ToInt32( Convert.ToString( hashtabel[ key ] ) );
+		if( hashtable.ContainsKey( key ) ){
+			return Convert.ToInt32( Convert.ToString( hashtable[ key ] ) );
 		}
 		return 0;
 	}
@@ -162,10 +162,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// long
 	//----------------------------------------------------------
-	public static long GetLong( Hashtable hashtabel, string key )
+	public static long GetLong( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return Convert.ToInt64( Convert.ToString( hashtabel[ key ] ) );
+		if( hashtable.ContainsKey( key ) ){
+			return Convert.ToInt64( Convert.ToString( hashtable[ key ] ) );
 		}
 		return 0;
 	}
@@ -173,10 +173,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// float
 	//----------------------------------------------------------
-	public static float GetFloat( Hashtable hashtabel, string key )
+	public static float GetFloat( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return Convert.ToSingle( Convert.ToString( hashtabel[ key ] ) );
+		if( hashtable.ContainsKey( key ) ){
+			return Convert.ToSingle( Convert.ToString( hashtable[ key ] ) );
 		}
 		return 0.0f;
 	}
@@ -184,10 +184,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// double
 	//----------------------------------------------------------
-	public static double GetDouble( Hashtable hashtabel, string key )
+	public static double GetDouble( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return Convert.ToDouble( Convert.ToString( hashtabel[ key ] ) );
+		if( hashtable.ContainsKey( key ) ){
+			return Convert.ToDouble( Convert.ToString( hashtable[ key ] ) );
 		}
 		return 0.0f;
 	}
@@ -195,10 +195,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// string
 	//----------------------------------------------------------
-	public static string GetString( Hashtable hashtabel, string key )
+	public static string GetString( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return Convert.ToString( hashtabel[ key ] );
+		if( hashtable.ContainsKey( key ) ){
+			return Convert.ToString( hashtable[ key ] );
 		}
 		return "";
 	}
@@ -206,10 +206,10 @@ public static class HashtableUtil
 	//----------------------------------------------------------
 	// Hashtable
 	//----------------------------------------------------------
-	public static Hashtable GetHashtable( Hashtable hashtabel, string key )
+	public static Hashtable GetHashtable( Hashtable hashtable, string key )
 	{
-		if( hashtabel.ContainsKey( key ) ){
-			return hashtabel[ key ] as Hashtable;
+		if( hashtable.ContainsKey( key ) ){
+			return hashtable[ key ] as Hashtable;
 		}
 		return null;
 	}
