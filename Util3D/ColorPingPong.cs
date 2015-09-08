@@ -1,26 +1,31 @@
 ﻿using UnityEngine;
 
 //---------------------------------------------------------
-// UV 加算ループ
+// ピンポンカラー
 //---------------------------------------------------------
-public class UVAddLoop : MonoBehaviour
-{
-	// 一秒あたりのオフセット値
-	[SerializeField]
-	public Vector2		m_Offset			= new Vector2( 0.0f, 0.0f );
+public class ColorPingPong : MonoBehaviour {
 
-	// 初期オフセット値
+	// 開始カラー
 	[SerializeField]
-	public Vector2		m_mainTextureOffset	= new Vector2( 0.0f, 0.0f );
+	public Color m_ColorStart	= new Color( 1.0f, 1.0f, 1.0f, 1.0f );
+
+	// 終了カラー
+	[SerializeField]
+	public Color m_ColorEnd		= new Color( 0.8f, 0.8f, 0.8f, 1.0f );
+
+	// ループ秒数
+	[ SerializeField]
+	public float m_SetLoopSec	= 2.0f;
 
 	// マテリアル
-	private Material	m_Material			= null;
+	public Material				m_Material;
 
 	//---------------------------------------------------------
 	// 初期化
 	//---------------------------------------------------------
 	void Awake()
 	{
+		// マテリアル
 		m_Material = GetComponent<Renderer>().material;
 	}
 
@@ -29,17 +34,9 @@ public class UVAddLoop : MonoBehaviour
 	//---------------------------------------------------------
 	void Update()
 	{
-		// 加算
-		m_mainTextureOffset.x += m_Offset.x * Time.smoothDeltaTime;
-		m_mainTextureOffset.y += m_Offset.y * Time.smoothDeltaTime;
-
-		// 数値範囲
-		m_mainTextureOffset.x -= Mathf.Floor( m_mainTextureOffset.x );
-		m_mainTextureOffset.y -= Mathf.Floor( m_mainTextureOffset.y );
-
-		// 反映
-		m_Material.mainTextureOffset = m_mainTextureOffset;
-    }
+		float lerp			= Mathf.PingPong( Time.time, m_SetLoopSec ) / m_SetLoopSec;
+		m_Material.color	= Color.Lerp( m_ColorStart, m_ColorEnd, lerp );
+	}
 
 	//---------------------------------------------------------
 }

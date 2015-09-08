@@ -7,15 +7,15 @@ public class UVPattern : MonoBehaviour
 {
 	// パターン数 U
 	[SerializeField]
-	private int m_U_Cnt		= 4;
+	public int m_U_Cnt		= 4;
 
 	// パターン数 V
 	[SerializeField]
-	private int m_V_Cnt		= 4;
+	public int m_V_Cnt		= 4;
 
 	// 間隔
 	[SerializeField]
-	private float m_Interval = 0.0f;
+	public float m_Interval = 0.0f;
 
 	// 総パターン数
 	private int m_Max_Cnt	= 16;

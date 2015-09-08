@@ -10,7 +10,7 @@ public class Billboard : MonoBehaviour
 	public bool m_OnlyY = false;
 
 	// カメラ
-	private Camera m_Camera;
+	public Camera m_Camera;
 
 	// ターゲット座標
 	public Vector3 m_Target	= new Vector3();
